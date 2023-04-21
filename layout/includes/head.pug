@@ -23,6 +23,8 @@
 meta(charset='UTF-8')
 meta(http-equiv="X-UA-Compatible" content="IE=edge")
 meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+//- meta(name="naver-site-verification" content="781ec9a0cd374b214093119879063377fa8dedd6")
+
 title= tabTitle
 if pageKeywords
   meta(name="keywords" content=pageKeywords)
@@ -76,3 +78,12 @@ include ./head/noscript.pug
 !=fragment_cache('injectHeadJs', function(){return inject_head_js()})
 
 !=fragment_cache('injectHead', function(){return injectHtml(theme.inject.head)})
+
+//- !{ autoCanonical(config, page) }
+//- if theme.google_site_verification
+//-   meta(name="google-site-verification" content=theme.google_site_verification)
+  
+
+//- if theme.google_site_verification
+//-   meta(name="naver-site-verification" content="781ec9a0cd374b214093119879063377fa8dedd6")
+//-   <meta name="naver-site-verification" content="781ec9a0cd374b214093119879063377fa8dedd6" />
